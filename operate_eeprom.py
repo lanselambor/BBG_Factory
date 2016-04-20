@@ -19,7 +19,7 @@ class eeprom:
 
 
     def readBoardinfo(self):
-        self.fp_sys = open('/sys/devices/ocp.3/44e0b000.i2c/i2c-0/0-0050/eeprom','rb')
+        self.fp_sys = open('/sys/devices/platform/ocp/44e0b000.i2c/i2c-0/0-0050/at24-0/nvmem','rb')
         self.eeprom_dump = self.fp_sys.read(78)
 
         self.magic,\
@@ -52,7 +52,7 @@ class eeprom:
         self.fp_local.write(self.eeprom_dump)
         self.fp_local.close()
 
-    	os.system("dd if=./eeprom.dump of=/sys/devices/ocp.3/44e0b000.i2c/i2c-0/0-0050/eeprom")
+    	os.system("dd if=./eeprom.dump of=/sys/devices/platform/ocp/44e0b000.i2c/i2c-0/0-0050/at24-0/nvmem")
         os.system("sync")
 
 

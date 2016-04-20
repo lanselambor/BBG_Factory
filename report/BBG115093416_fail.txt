@@ -1,38 +1,35 @@
-That's BealgeBone Green  Seiral:/media/usb1/report/BBG115070062_fail.txt production test report!
+That's BealgeBone Green  Seiral:/media/usb1/report/BBG115093416_fail.txt production test report!
 if you have any questions about this test reports,Please conntact:www.seeedstudio.com
-Software System:debian 7.8
+Software System:debian 8.4
 Software Version:
-Linux version 3.8.13-bone71.1 (pillar@server) (gcc version 4.9.3 20141031 (prerelease) (Linaro GCC 2014.11) ) #1 SMP Wed May 20 20:13:27 PDT 2015
+Linux version 4.1.20-ti-r58 (root@b1-omap5-uevm-2gb) (gcc version 4.9.2 (Debian 4.9.2-10) ) #1 SMP Thu Apr 14 22:53:06 UTC 2016
 Hardware test:
 ************************************************************************
 -------------------------------eeprom test------------------------------
-write board serial: BBG115070062------>[pass]
+write board serial: BBG115093416------>[pass]
 
 write board version: 26------>[pass]
 
 --------------------------------DDR test------------------------------
-DDR size: 508368 kB------>[pass]
+DDR size: 504108 kB------>[pass]
 
 -------------------------------eMMC test------------------------------
-eMMc size: 3.601562 GB ------>[pass]
+eMMc size: 3.640625 GB ------>[pass]
 
 ----------------------------Debug Uart test---------------------------
 Debug Uart test   ------>[pass]
-
-----------------------------Grove Uart test---------------------------
-Grove Uart test   ------>[pass]
 
 ----------------------------Grove I2C test----------------------------
 Grove I2C test   ------>[pass]
 
 ----------------------------analog pins test---------------------------
-1.625000 (AIN0) is in of range: 1.500000 ~ 1.750000.
-0.901000 (AIN2) is in of range: 0.850000 ~ 0.950000.
-1.201000 (AIN4) is in of range: 1.140000 ~ 1.260000.
-1.500000 (AIN6) is in of range: 1.420000 ~ 1.580000.
-1.121000 (AIN1) is in of range: 1.040000 ~ 1.160000.
-1.010000 (AIN3) is in of range: 0.950000 ~ 1.050000.
-1.676000 (AIN5) is in of range: 1.500000 ~ 1.700000.
+1.701563 (AIN0) is in of range: 1.500000 ~ 1.750000.
+0.903516 (AIN2) is in of range: 0.850000 ~ 0.950000.
+1.200586 (AIN4) is in of range: 1.140000 ~ 1.260000.
+1.502930 (AIN6) is in of range: 1.420000 ~ 1.580000.
+1.128516 (AIN1) is in of range: 1.040000 ~ 1.160000.
+1.525781 (AIN3) is in of range: 1.500000 ~ 1.700000.
+1.509961 (AIN5) is in of range: 1.500000 ~ 1.700000.
 analog pins test   ------>[pass]
 
 ----------------------------PMU test---------------------------
@@ -51,9 +48,8 @@ gpio test ------>[pass]
 -------------------------------Net test-------------------------------
 Ethernet test ------->[passed]
 
-Board ethernet mac address :78:a5:04:ef:0f:fe
+Board ethernet mac address :1c:ba:8c:d9:d5:67
 -------------------------------OTG test-------------------------------
 OTG test   ------>[pass]
 
 ************************************************************************
-sd button test ok!

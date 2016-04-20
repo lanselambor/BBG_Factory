@@ -232,14 +232,15 @@ if __name__ == '__main__':
         report.close()
         report_error()
     report.write("************************************************************************\n")
-    GPIO.setup('P8_43', GPIO.IN)
-    GPIO.setup(OK_PIN,GPIO.OUT)
+    P8_43 = mraa.Gpio(43)    #GPIO.setup('P8_43', GPIO.IN)
+    P8_43.dir(mraa.DIR_IN)
+    ok_pin.dir(mraa.DIR_OUT)   #GPIO.setup(OK_PIN,GPIO.OUT)
     test_pin.dir(mraa.DIR_OUT)   #GPIO.setup(TEST_PIN,GPIO.OUT)
 
-    GPIO.output(OK_PIN,GPIO.HIGH)
+    ok_pin.write(1)    #GPIO.output(OK_PIN,GPIO.HIGH)
     test_pin.write(0)   #GPIO.output(TEST_PIN,GPIO.LOW)
     while True:
-        if GPIO.input('P8_43') == GPIO.LOW:
+        if P8_43.read() == 0:
             report.write("sd button test ok!")
             break
 
