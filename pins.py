@@ -429,7 +429,8 @@ def check_power():
     return isok,result
     
 if __name__ == '__main__':
-    print check_power()
-    print check_voltage()    
-    print check_i2c()
-    print check_io()    
+    #print check_power()
+    #print check_voltage()    
+    #print check_i2c()
+    #print check_io()    
+    check_uart()

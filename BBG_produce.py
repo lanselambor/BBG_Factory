@@ -144,17 +144,21 @@ if __name__ == '__main__':
         report.write("Debug Uart test   ------>[fail]\n\n")
         report.close()
         report_error()    
-    '''    
+        
     # Grove Uart test
     print "Grove Uart test"
     report.write("----------------------------Grove Uart test---------------------------\n")
+    os.system("echo BB-UART2 > /sys/devices/platform/bone_capemgr/slots")
+    os.system("sync")
+    os.system("sync")
+    os.system("sync")
     if pins.check_uart() == 'ok':
         report.write("Grove Uart test   ------>[pass]\n\n")
     else:
         report.write("Grove Uart test   ------>[fail]\n\n")
         report.close()
         report_error()
-    '''
+    
     # Grove I2C test
     print "Grove I2C test"
     report.write("----------------------------Grove I2C test----------------------------\n")
