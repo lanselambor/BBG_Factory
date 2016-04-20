@@ -62,13 +62,16 @@ if __name__ == '__main__':
     ok_pin.write(0)        # GPIO.output(OK_PIN,GPIO.LOW)
     ng_pin.write(0)        # GPIO.output(NG_PIN,GPIO.LOW)    
 
-    #id = 'BBG115051111'    
+    #id = 'BBG115051111'   
+    print  "start readID" 
     id = barcode.readID()
     report_file = id
     okfile = id
     #report_file = 'BBG115051111'
     print  report_file
     
+    #report = open(report_file,'w+')
+    #report.write("-------------- Barcoder test ----------- \n")
     if report_file != 'blank':
         usbfile = open("/proc/mounts",'r')
         while True:
@@ -78,9 +81,9 @@ if __name__ == '__main__':
                 report_file = line.split()[1]+"/report/"+report_file+'_fail'+".txt"
                 okfile = line.split()[1]+"/report/"+okfile+'_pass'+".txt"
                 break
-
+                
         report = open(report_file,'w+')
-    else:
+    else:        
         report_error()
     report.write("That's BealgeBone Green  Seiral:" + report_file + " production test report!\n")
     report.write("if you have any questions about this test reports,Please conntact:www.seeedstudio.com\n")
@@ -259,5 +262,5 @@ if __name__ == '__main__':
     os.system("sync")
     os.system("sync")
 
-    mraa.Gpio(OK_PIN).write(0)    #GPIO.output(OK_PIN,GPIO.LOW)
+    ok_pin.write(0)    #GPIO.output(OK_PIN,GPIO.LOW)
  
